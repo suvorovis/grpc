@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package v2.service1;
+
+option go_package = "./internal/app/adapter/api/grpc/v2/service1";
+
+service Test {
+  rpc Test(SomeReq) returns (SomeRes) {}
+}
+
+message SomeReq {
+  string desc = 1;
+}
+
+message SomeRes {
+  string desc = 1;
+}
